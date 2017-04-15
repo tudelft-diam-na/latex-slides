@@ -1,0 +1,57 @@
+\documentclass{beamer}
+
+\usepackage{tikz}
+\usepackage{fancybox}
+\usepackage{graphicx}
+\usepackage{color}
+
+
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+
+\mode<presentation>
+{\usetheme{boadilla} % This theme will be changed into the TUDelft lay-out
+ \setbeamercovered{transparent}}
+\definecolor{tudblue}{rgb}{.004,.50,.78} % definition TUDelft blue color
+\definecolor{tudlightblue}{rgb}{.004,.70,.98}
+\setbeamercolor{structure}{fg=tudblue}
+\setbeamercolor{palette primary}{fg=white,bg=tudblue!85}       % Right field
+\setbeamercolor{palette secondary}{fg=white,bg=tudblue!85}     % Middle field
+\setbeamercolor{palette tertiary}{fg=tudblue!85,bg=tudblue!85} % Left field
+\setbeamersize{text margin left=1cm}
+\setbeamersize{text margin right=1cm}
+\setbeamersize{sidebar width left=0.5cm}
+
+
+
+\title[My subtitle]{My great talk}
+\author[{\color{white}\hspace{-1.3cm}My Name, TU Delft}]{\textbf{M. Name$^{*,\dag}$} and M. Supervisor$^{\dag}$}
+\institute[]{
+$^*$Email: \textcolor{tudblue}{\texttt{my.lastname@tudelft.nl}}\\
+$^\dag$Delft Institute of Applied Mathematics \\
+Delft University of Technology \\
+Delft, The Netherlands
+}
+\date[]{\today}
+\tikzset{textlabel/.style={color=white}}
+
+\begin{document}
+\setbeamertemplate{sidebar left}  % blue square left above
+{\vfill
+\rlap{%\hskip0.1cm
+\includegraphics[scale=0.33]{TUDelft/beamer-tudelft-bies.jpg} }
+\vskip-5pt}
+\maketitle
+
+
+\begin{frame}
+ \frametitle{First slide}
+Here come my talk...
+\end{frame}
+
+\end{document}
+
+
