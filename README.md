@@ -2,4 +2,4 @@
 
 TUD color can be used with `\color{tudblue}`.
 
-![](/TUDelft/top_page.png =250x150)
+![](/TUDelft/top_page.png | width=100)
